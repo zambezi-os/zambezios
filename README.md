@@ -12,11 +12,19 @@ Bootable, reproducible, minimal.
 
 ## Status
 
-Phase 0 — build system setup. See [docs/roadmap.md](docs/roadmap.md).
+Phase 0 — external tree in place, first build unverified. See [docs/roadmap.md](docs/roadmap.md).
 
 ## Build
 
-Not yet — Buildroot external tree and first defconfig land in Phase 0/1.
+Requires: `make`, `git`, build toolchain (`gcc`, `ncurses`, `rsync`, `bc`,
+`openssl` headers), and `qemu-system-aarch64` to run the result.
+
+```sh
+make          # clone Buildroot (pinned), configure, build → buildroot/output/images/
+make run      # boot in QEMU aarch64 virt; serial console, ssh on :2222
+```
+
+First build downloads the full toolchain — expect tens of minutes.
 
 ## License
 

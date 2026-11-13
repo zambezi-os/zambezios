@@ -16,10 +16,10 @@ Track A is the project. Track B is the apprenticeship.
 
 ## Phase 0 — setup
 
-- [ ] Decide reference board: **Raspberry Pi 4** (cheap, documented, upstream
-      kernel + device tree) — alternative: BeagleBone Black, QEMU `virt` for CI
-- [ ] Pin a Buildroot release (LTS line)
-- [ ] External tree layout: `board/zambezios/` + `configs/zambezios_rpi4_defconfig`
+- [x] Reference target: QEMU `virt` aarch64 first; Raspberry Pi 4 second
+- [x] Pin a Buildroot release — `2025.02` (LTS line)
+- [x] External tree layout: `board/zambezios/` + `configs/zambezios_qemu_virt.fragment`
+      on `qemu_aarch64_virt_defconfig`
 - [ ] First `make` from clean checkout, boot under QEMU before touching hardware
 
 ## Phase 1 — boot
