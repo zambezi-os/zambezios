@@ -1,0 +1,12 @@
+# Buildroot output
+output/
+buildroot/
+*.img
+*.img.gz
+*.iso
+*.tar
+*.tar.*
+dl/
+
+# OS cruft
+.DS_Store
