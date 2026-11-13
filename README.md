@@ -12,7 +12,7 @@ Bootable, reproducible, minimal.
 
 ## Status
 
-Phase 0 — external tree in place, first build unverified. See [docs/roadmap.md](docs/roadmap.md).
+Phase 0 — external tree in place, first build unverified.
 
 ## Build
 
