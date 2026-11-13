@@ -5,15 +5,6 @@
 Ship something that boots before inviting contributors. Open source
 communities form around working artifacts, not around ideas.
 
-## Two tracks
-
-| Track | What | Why |
-|---|---|---|
-| **A — Embedded Linux** | Buildroot/Yocto image for reference hardware | Produces a real, usable OS in weeks–months; teaches boot chain, device trees, drivers, init, OTA |
-| **B — Kernel literacy** | xv6 source study + OSDev/Rust bare-metal tutorials | The long-term education track; runs alongside A, feeds eventual deeper work |
-
-Track A is the project. Track B is the apprenticeship.
-
 ## Phase 0 — setup
 
 - [x] Reference target: QEMU `virt` aarch64 first; Raspberry Pi 4 second
