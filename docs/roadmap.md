@@ -41,5 +41,5 @@ communities form around working artifacts, not around ideas.
 ## Non-goals (for now)
 
 - Desktop/GUI OS — this is an embedded/edge OS
-- Custom kernel from scratch — Track B is study, not product
+- Custom kernel from scratch — upstream Linux, configured not forked
 - Broad hardware support — one reference board done well
