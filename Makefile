@@ -4,7 +4,7 @@ BUILDROOT_DIR     := $(CURDIR)/buildroot
 BASE_DEFCONFIG    ?= qemu_aarch64_virt_defconfig
 FRAGMENT          := $(CURDIR)/configs/zambezios_qemu_virt.fragment
 
-.PHONY: all image defconfig run clean distclean
+.PHONY: all image defconfig run clean distclean docker-image docker
 
 all: image
 
@@ -28,3 +28,14 @@ clean:
 
 distclean:
 	rm -rf $(BUILDROOT_DIR)
+
+# Buildroot needs a Linux host — build inside a container on macOS/Windows.
+docker-image:
+	docker build -t zambezios-build -f docker/Dockerfile .
+
+docker: docker-image
+	docker run --rm -v $(CURDIR):/zambezios zambezios-build make image
+
+docker-run:
+	docker run --rm -v $(CURDIR):/zambezios zambezios-build \
+		board/zambezios/qemu-virt/run-qemu.sh $(BUILDROOT_DIR)/output/images
