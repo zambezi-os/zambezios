@@ -1,5 +1,7 @@
 # ZambeziOS
 
+**English** | [Português](README.pt.md)
+
 Custom embedded Linux operating system built with Buildroot.
 Bootable, reproducible, minimal.
 
